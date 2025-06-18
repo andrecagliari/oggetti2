@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rubrica Contatti</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Rubrica Contatti</h1>
+    <div class="buttons">
+      <button onclick="rubrica.mostraTutti()">📋 Mostra tutti</button>
+      <button onclick="rubrica.mostraContattoPrompt()">🔍 Mostra uno</button>
+      <button onclick="rubrica.aggiungiContattoPrompt()">➕ Aggiungi</button>
+      <button onclick="rubrica.modificaContattoPrompt()">✏️ Modifica</button>
+      <button onclick="rubrica.eliminaContattoPrompt()">🗑️ Elimina</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
