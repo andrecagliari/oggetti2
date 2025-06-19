@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rubrica Contatti</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Rubrica Contatti</h1>
-    <div class="buttons">
-      <button onclick="rubrica.mostraTutti()">📋 Mostra tutti</button>
-      <button onclick="rubrica.mostraContattoPrompt()">🔍 Mostra uno</button>
-      <button onclick="rubrica.aggiungiContattoPrompt()">➕ Aggiungi</button>
-      <button onclick="rubrica.modificaContattoPrompt()">✏️ Modifica</button>
-      <button onclick="rubrica.eliminaContattoPrompt()">🗑️ Elimina</button>
+    <h1>Rubrica Contatti 📒</h1>
+
+    <div class="form">
+      <input type="text" id="nome" placeholder="Nome">
+      <input type="text" id="telefono" placeholder="Telefono">
+      <button onclick="aggiungiContatto()">Aggiungi</button>
     </div>
-    <pre id="output"></pre>
+
+    <div class="search">
+      <input type="text" id="ricerca" placeholder="Cerca contatto..." oninput="cercaContatto()">
+    </div>
+
+    <table id="tabella">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Telefono</th>
+          <th>Azioni</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
   </div>
 
   <script src="main.js"></script>
